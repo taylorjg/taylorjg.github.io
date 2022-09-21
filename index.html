@@ -31,6 +31,8 @@
   <div class="container mt-4">
     <h5>Contents</h5>
     <ul>
+      <li><a href="#sudoku-buster">Sudoku Buster</a></li>
+      <li><a href="#shazizzle">Shazizzle</a></li>
       <li><a href="#dlx">Donald E. Knuth's Algorithm X using the Dancing Links technique</a></li>
       <li><a href="#solid-light-works">Solid Light Works</a></li>
       <li><a href="#rubiks-cube">Rubik's Cube</a></li>
@@ -38,7 +40,81 @@
       <li><a href="#solitaire-rl-web">Solving Peg Solitaire using Reinforcement Learning</a></li>
       <li><a href="#mastermind">Mastermind</a></li>
       <li><a href="#basketcase">Basketcase</a></li>
+      <li><a href="#dotnet-versioninfo">.NET Global Tool: dotnet-versioninfo</a></li>
     </ul>
+
+    <div id="sudoku-buster" class="card border-info mb-4">
+      <div class="card-header header-with-back-to-top">
+        <a href="https://github.com/taylorjg/sudoku-buster">sudoku-buster</a>
+        <a href="#top">back to top</a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Description</h5>
+        <p class="card-text">
+          This little web app uses the camera to scan a Sudoku puzzle from a newspaper or magazine, solves it
+          and displays the solution.
+        </p>
+        <p>
+          I use OpenCV to find the bounding box of the Sudoku puzzle. Initially, I used OpenCV.js but it is very large
+          (I got the build of OpenCV.js down to about 4MB by omitting stuff I wasn't using).
+          Later, I moved this code to C++ and packaged it as a web assembly. This got it down to about 1MB.
+          See <a href="https://github.com/taylorjg/emscripten-opencv">this separate project</a>.
+        </p>
+        <p>
+          In order to recognise the digits/blanks, I used TensorFlow.js to train a convolutional neural network (CNN)
+          using about 70 images of Sudoku puzzles from newspapers and magazines.
+          See <a href="https://github.com/taylorjg/sudoku-scanner">this separate project</a>.
+        </p>
+        <p>
+          To solve the scanned Sudoku puzzle, I use my implementation of Donald E. Knuth's Algorithm X.
+          See <a href="https://github.com/taylorjg/dlxlibjs">this separate project</a>.
+        </p>
+        <h5 class="card-title">Technologies</h5>
+        <ul>
+          <li>JavaScript</li>
+          <li>OpenCV</li>
+          <li>C++ Web Assembly</li>
+          <li>TensorFlow.js</li>
+        </ul>
+        <h5 class="card-title">Screenshot</h5>
+        <p><i>TODO</i></p>
+        <h5 class="card-title">Deployed Site</h5>
+        <ul>
+          <li><a href="https://sudoku-buster.onrender.com">https://sudoku-buster.onrender.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="shazizzle" class="card border-info mb-4">
+      <div class="card-header header-with-back-to-top">
+        <a href="https://github.com/taylorjg/shazizzle">shazizzle</a>
+        <a href="#top">back to top</a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Description</h5>
+        <p class="card-text">
+          After experimenting a bit with the Web Audio API, I then created a very basic version of Shazam
+          based on <a href="https://www.ee.columbia.edu/~dpwe/papers/Wang03-shazam.pdf">this paper</a> and
+          <a href="http://coding-geek.com/how-shazam-works">this blog post</a>.
+          There are only 12 tracks in the database!
+        </p>
+        <h5 class="card-title">Technologies</h5>
+        <ul>
+          <li>JavaScript</li>
+          <li>Web Audio API</li>
+          <li>PostgreSQL</li>
+          <li>RxJS (when matching in streaming mode)</li>
+        </ul>
+        <h5 class="card-title">Screenshot</h5>
+        <p><i>TODO</i></p>
+        <h5 class="card-title">Deployed Site</h5>
+        <ul>
+          <li><a href="https://shazizzle.onrender.com">https://shazizzle.onrender.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <div id="dlx" class="card border-info mb-4">
       <div class="card-header header-with-back-to-top">
@@ -48,18 +124,19 @@
       <div class="card-body">
         <h5 class="card-title">Description</h5>
         <p class="card-text">
-          I have implemented this algorithm in both .NET and JavaScript
+          I have implementations of this algorithm available as packages in both .NET and JavaScript
           - along with multiple demo applications. The algorithm can be used to
           solve a class of problems known as "exact cover" - essentially where
-          a fixed number of pieces must all be used once each.
+          a fixed number of pieces must all be used exactly once each.
         </p>
         <h5 class="card-title">Screenshots</h5>
         <img width="500" height="500" src="screenshots-and-videos/dlx/collage.jpg">
         <p>The images in the collage are as follows (left to right, top to bottom):</p>
         <ul>
-          <li>DraughtBoardPuzzle, TetraSticks, SudokuDlx, TetrisCubeDlx</li>
-          <li>FlowFreeSolverWpf, RippleEffectDlx</li>
-          <li>pentominoes, sudoku-dlx-js, ripple-effect-dlx, TetrisCubeWebGL</li>
+          <li>DraughtBoardPuzzle (.NET), TetraSticks (.NET), SudokuDlx (.NET), TetrisCubeDlx (.NET)</li>
+          <li>FlowFreeSolverWpf (.NET), RippleEffectDlx (.NET)</li>
+          <li>pentominoes (JavaScript), sudoku-dlx-js (JavaScript), ripple-effect-dlx (JavaScript), TetrisCubeWebGL
+            (JavaScript)</li>
         </ul>
         <h5 class="card-title">Repos</h5>
         <ul>
@@ -282,6 +359,25 @@
         <ul>
           <li><a href="https://basketcase.onrender.com">https://basketcase.onrender.com</a>
           </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="dotnet-versioninfo" class="card border-info mb-4">
+      <div class="card-header header-with-back-to-top">
+        <a href="https://github.com/taylorjg/dotnet-versioninfo">dotnet-versioninfo</a>
+        <a href="#top">back to top</a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Description</h5>
+        <p class="card-text">
+          A .NET global tool to display the version info of .NET assemblies.
+          It is available on NuGet Gallery <a href="https://www.nuget.org/packages/dotnet-versioninfo">here</a>.
+        </p>
+        <h5 class="card-title">Technologies</h5>
+        <ul>
+          <li>C#</li>
+          <li>.NET</li>
         </ul>
       </div>
     </div>
