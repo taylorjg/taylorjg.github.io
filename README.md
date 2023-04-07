@@ -1,2 +1,0 @@
-taylorjg.github.io
-==================
