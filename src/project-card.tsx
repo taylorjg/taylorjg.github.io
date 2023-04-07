@@ -34,6 +34,11 @@ export const ProjectCard: React.FunctionComponent<CardProps> = ({
   const webpCardImagePath = makeImagePath(project.cardImage.path, "webp");
   const pngCardImagePath = makeImagePath(project.cardImage.path, "png");
 
+  const handleLearnMore = () => {
+    onLearnMore(project);
+    gtag("event", "learn_more_click", { repo: project.repo });
+  };
+
   return (
     <Card square variant="outlined" sx={{ backgroundColor: "#444" }}>
       <AspectRatio ratio="16/9">
@@ -56,7 +61,7 @@ export const ProjectCard: React.FunctionComponent<CardProps> = ({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={() => onLearnMore(project)}>
+        <Button size="small" onClick={handleLearnMore}>
           Learn More
         </Button>
       </CardActions>

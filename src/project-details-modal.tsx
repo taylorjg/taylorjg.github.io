@@ -52,11 +52,27 @@ export const ProjectDetailsModal: React.FunctionComponent<
           </ul>
           <Typography variant="h6">GitHub Repo</Typography>
           <p>
-            <a href={project.repoLink}>{project.repoLink}</a>
+            <a
+              href={project.repoLink}
+              onClick={() => {
+                gtag("event", "repo_link_click", {
+                  repo: project.repo,
+                });
+              }}
+            >
+              {project.repoLink}
+            </a>
           </p>
           <Typography variant="h6">Deployed Website</Typography>
           <p>
-            <a href={project.website}>{project.website}</a>
+            <a
+              href={project.website}
+              onClick={() => {
+                gtag("event", "website_link_click", { repo: project.repo });
+              }}
+            >
+              {project.website}
+            </a>
           </p>
         </StyledContent>
       </DialogContent>
