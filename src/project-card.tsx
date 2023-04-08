@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { AspectRatio } from "react-aspect-ratio";
+import { sendAnalyticsClickEvent } from "./analytics";
 
 const makeImagePath = (path: string, extname: string): string => {
   const dotIndex = path.lastIndexOf(".");
@@ -36,7 +37,7 @@ export const ProjectCard: React.FunctionComponent<CardProps> = ({
 
   const handleLearnMore = () => {
     onLearnMore(project);
-    gtag("event", "learn_more_click", { repo: project.repo });
+    sendAnalyticsClickEvent("learn_more_click", project);
   };
 
   return (

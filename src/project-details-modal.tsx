@@ -11,6 +11,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import ReactMarkdown from "react-markdown";
 import { Project } from "./data";
 import { StyledContent, StyledTitle } from "./project-details-modal.styles";
+import { sendAnalyticsClickEvent } from "./analytics";
 
 export type ProjectDetailsModalProps = {
   project: Project;
@@ -55,9 +56,7 @@ export const ProjectDetailsModal: React.FunctionComponent<
             <a
               href={project.repoLink}
               onClick={() => {
-                gtag("event", "repo_link_click", {
-                  repo: project.repo,
-                });
+                sendAnalyticsClickEvent("repo_link_click", project);
               }}
             >
               {project.repoLink}
@@ -68,7 +67,7 @@ export const ProjectDetailsModal: React.FunctionComponent<
             <a
               href={project.website}
               onClick={() => {
-                gtag("event", "website_link_click", { repo: project.repo });
+                sendAnalyticsClickEvent("website_link_click", project);
               }}
             >
               {project.website}
