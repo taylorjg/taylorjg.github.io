@@ -41,7 +41,12 @@ export const ProjectCard: React.FunctionComponent<CardProps> = ({
   };
 
   return (
-    <Card square variant="outlined" sx={{ backgroundColor: "#444" }}>
+    <Card
+      square
+      variant="outlined"
+      sx={{ backgroundColor: "#444" }}
+      data-testid="card"
+    >
       <AspectRatio ratio="16/9">
         <picture>
           {makePictureSource(webpCardImagePath)}
