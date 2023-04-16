@@ -5,7 +5,6 @@ export const sendAnalyticsClickEvent = (
   project: Project
 ) => {
   const command = "event";
-  const repo = { project };
-  const eventParams = { repo };
+  const eventParams = { repo: project.repo };
   gtag(command, eventName, eventParams);
 };
