@@ -12,6 +12,7 @@ import ReactMarkdown from "react-markdown";
 import { Project } from "./data";
 import { StyledContent, StyledTitle } from "./project-details-modal.styles";
 import { sendAnalyticsClickEvent } from "./analytics";
+import { SlowLoad } from "./slow-load";
 
 export type ProjectDetailsModalProps = {
   project: Project;
@@ -24,6 +25,7 @@ export const ProjectDetailsModal: React.FunctionComponent<
   const theme = useTheme();
   const mediaQuery = theme.breakpoints.down("md");
   const isSmallScreen = useMediaQuery(mediaQuery);
+  const isSlowLoad = project.website.includes("onrender.com");
 
   return (
     <Dialog
@@ -72,6 +74,7 @@ export const ProjectDetailsModal: React.FunctionComponent<
             >
               {project.website}
             </a>
+            {isSlowLoad && <SlowLoad />}
           </p>
         </StyledContent>
       </DialogContent>
