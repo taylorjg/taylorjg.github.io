@@ -76,6 +76,18 @@ export const ProjectDetailsModal: React.FunctionComponent<
             </a>
             {isSlowLoad && <SlowLoad />}
           </p>
+          {project.seeAlso?.length && (
+            <>
+              <Typography variant="h6">See Also</Typography>
+              <ul>
+                {project.seeAlso.map(({ url, name }, index) => (
+                  <li key={index}>
+                    <a href={url}>{name}</a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </StyledContent>
       </DialogContent>
     </Dialog>

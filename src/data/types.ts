@@ -3,6 +3,10 @@ export type Project = {
   repo: string;
   repoLink: string;
   website: string;
+  seeAlso?: {
+    url: string;
+    name: string;
+  }[];
   technologies: string[];
   shortDescription: string;
   longDescriptionMarkdown: string;

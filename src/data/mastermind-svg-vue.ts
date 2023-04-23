@@ -3,6 +3,12 @@ export default {
   repo: "mastermind-svg-vue",
   repoLink: "https://github.com/taylorjg/mastermind-svg-vue",
   website: "https://taylorjg.github.io/mastermind-svg-vue",
+  seeAlso: [
+    {
+      url: "https://taylorjg.github.io/mastermind-svg-vue?autosolve",
+      name: "Deployed website in autosolve mode",
+    },
+  ],
   technologies: [
     "JavaScript",
     "Vue.js",
