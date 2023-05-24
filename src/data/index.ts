@@ -11,6 +11,7 @@ import mastermind from "./mastermind-svg-vue";
 import basketcase from "./basketcase";
 import versionInfo from "./dotnet-versioninfo";
 import sparklerGame from "./sparkler-game-phaser";
+import fractalsWebGL from "./FractalsWebGL";
 
 const projects: Project[] = [
   sudokuBuster,
@@ -25,6 +26,7 @@ const projects: Project[] = [
   basketcase,
   versionInfo,
   sparklerGame,
+  fractalsWebGL,
 ];
 
 export default projects;
