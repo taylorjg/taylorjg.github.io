@@ -12,6 +12,7 @@ import basketcase from "./basketcase";
 import versionInfo from "./dotnet-versioninfo";
 import sparklerGame from "./sparkler-game-phaser";
 import fractalsWebGL from "./FractalsWebGL";
+import printPuz from "./print-puz-react-vite";
 
 const projects: Project[] = [
   sudokuBuster,
@@ -27,6 +28,7 @@ const projects: Project[] = [
   versionInfo,
   sparklerGame,
   fractalsWebGL,
+  printPuz,
 ];
 
 export default projects;
