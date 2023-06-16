@@ -1,8 +1,14 @@
 export default {
   title: "Basket Case",
-  repo: "basketcase",
-  repoLink: "https://github.com/taylorjg/basketcase",
-  website: "https://basketcase.onrender.com",
+  repo: "BasketCase",
+  repoLink: "https://github.com/taylorjg/BasketCase",
+  website: "https://taylorjg.github.io/BasketCase",
+  seeAlso: [
+    {
+      url: "https://github.com/taylorjg/basketcase-serverless",
+      name: "Serverless Backend",
+    },
+  ],
   technologies: ["JavaScript", "AngularJS 1.x", "Elasticsearch"],
   shortDescription:
     "Simple online store selling washing machines with faceted navigation",
