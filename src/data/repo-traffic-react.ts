@@ -14,7 +14,7 @@ export default {
     "GitHub REST API",
     "GitHub GraphQL API",
   ],
-  shortDescription: "GitHub OAuth App to display repo traffic data",
+  shortDescription: "GitHub OAuth App to display your repo traffic data",
   longDescriptionMarkdown: `
 This little app lists your GitHub repos along with traffic details
 (views and clones). It is a

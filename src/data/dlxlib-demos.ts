@@ -3,6 +3,12 @@ export default {
   repo: "dlxlib-demos",
   repoLink: "https://github.com/taylorjg/dlxlib-demos",
   website: "https://taylorjg.github.io/dlxlib-demos",
+  seeAlso: [
+    {
+      url: "https://github.com/taylorjg/DlxLibDemos",
+      name: "Similar project built using .NET MAUI",
+    },
+  ],
   technologies: [
     "TypeScript",
     "React",
