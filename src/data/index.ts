@@ -15,6 +15,7 @@ import fractalsWebGL from "./FractalsWebGL";
 import printPuz from "./print-puz-react-vite";
 
 const projects: Project[] = [
+  basketcase,
   sudokuBuster,
   shazizzle,
   dlxlibDemos,
@@ -24,7 +25,6 @@ const projects: Project[] = [
   repoTraffic,
   pegSolitaire,
   mastermind,
-  basketcase,
   versionInfo,
   sparklerGame,
   fractalsWebGL,
