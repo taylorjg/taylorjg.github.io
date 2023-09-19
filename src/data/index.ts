@@ -13,9 +13,11 @@ import versionInfo from "./dotnet-versioninfo";
 import sparklerGame from "./sparkler-game-phaser";
 import fractalsWebGL from "./FractalsWebGL";
 import printPuz from "./print-puz-react-vite";
+import wordShower from "./word-shower-react";
 
 const projects: Project[] = [
   basketcase,
+  wordShower,
   sudokuBuster,
   shazizzle,
   dlxlibDemos,
