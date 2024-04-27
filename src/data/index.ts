@@ -14,8 +14,10 @@ import sparklerGame from "./sparkler-game-phaser";
 import fractalsWebGL from "./FractalsWebGL";
 import printPuz from "./print-puz-react-vite";
 import wordShower from "./word-shower-react";
+import dvlaViewer from "./dvla-viewer";
 
 const projects: Project[] = [
+  dvlaViewer,
   basketcase,
   wordShower,
   sudokuBuster,
